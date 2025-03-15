@@ -1,0 +1,58 @@
+/* Base slider styling */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #2563eb 0%, #e5e7eb 50%, #2563eb 100%);
+  outline: none;
+  margin: 10px 0;
+}
+
+/* Hide default slider thumb since we're using custom circles */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+input[type=range]::-ms-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Track styling for Firefox */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb 0%, #e5e7eb 50%, #2563eb 100%);
+  border-radius: 4px;
+}
+
+/* Custom position indicator styling */
+.position-indicator {
+  transition: all 0.2s ease-in-out;
+}
+
+.position-indicator:hover {
+  transform: scale(1.2);
+}
+
+.active-position {
+  background-color: #2563eb;
+  border-radius: 9999px;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3);
+}
